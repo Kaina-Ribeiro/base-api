@@ -17,6 +17,7 @@
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
+    "lines-between-class-members": "off",
     "prettier/prettier": "off",
     "no-console": "warn",
     "class-methods-use-this": "off",
