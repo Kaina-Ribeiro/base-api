@@ -1,6 +1,19 @@
 version: "4.7"
 
 services: 
+  database_ignite:
+    container_name: database_ignite
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=rentx
+    volumes:
+      - pgdata:/data/postgres
+      
   app:
     build: .
     container_name: rentx
@@ -8,3 +21,11 @@ services:
       - 3001:3001
     volumes:
       - .:/usr/app
+    links:
+      - database_ignite
+    depends_on:
+      - database_ignite
+
+volumes:
+  pgdata:
+    driver: local
