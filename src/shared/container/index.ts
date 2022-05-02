@@ -1,3 +1,4 @@
+import "./providers";
 import { container } from "tsyringe";
 import { UsersRepository } from "../../modules/accounts/repositories/implementations/UsersRepository";
 import { UsersTokensRepository } from "../../modules/accounts/repositories/implementations/UsersTokensRepository";
