@@ -14,11 +14,6 @@ export class CreateUsers1651499453838 implements MigrationInterface {
           {
             name: "name",
             type: "varchar",
-            isUnique: true,
-          },
-          {
-            name: "username",
-            type: "varchar",
           },
           {
             name: "password",
@@ -27,6 +22,7 @@ export class CreateUsers1651499453838 implements MigrationInterface {
           {
             name: "email",
             type: "varchar",
+            isUnique: true,
           },
           {
             name: "driver_license",
